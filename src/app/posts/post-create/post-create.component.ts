@@ -16,6 +16,7 @@ export class PostCreateComponent {
 
 
   onAddPost(form:NgForm){
+    console.log("",form)
     if(form.invalid)
       {
         return;
@@ -27,7 +28,6 @@ export class PostCreateComponent {
     // };
     
     this.apiPostsService.addPost(
-      0,
       form.value.title,
       form.value.content
     )
